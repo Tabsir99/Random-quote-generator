@@ -6,7 +6,7 @@ export default function Header({handleClick}) {
     return (
         <header>
 
-            <img src="/designer.png" width={40}/>
+            <div id='img'></div>
             <nav>
                 <a href='#'>Home</a>
                 <a href='https://portfolio-tabsir.vercel.app'>About</a>
