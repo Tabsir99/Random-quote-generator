@@ -233,6 +233,7 @@ Header nav a{
   font-size: 1.5rem;
   cursor: pointer;
 }
+
 #save:active{
   transform: scale(0.9);
 }
@@ -278,4 +279,8 @@ Header nav a{
   font-size: 1.6rem;
   top: 6rem;
 }
+#fav-quotes span{
+  font-size: 2rem;
+}
+
 }

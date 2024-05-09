@@ -1,6 +1,6 @@
 import Search from './search.jsx';
 import Social from './social.jsx';
-import React, { useState } from 'react';
+import React, { useState ,useEffect} from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
@@ -118,14 +118,12 @@ export default function MainBody({favIsClicked ,handleClick}) {
     }
 
 
-
-
-      window.addEventListener('DOMContentLoaded',() => {
-
-        if(JSON.parse(localStorage.getItem('quotes')) !== null){
-            setFavQuotes(JSON.parse(localStorage.getItem('quotes')))
-            }
-      })
+    useEffect(() => {
+        const savedQuotes = JSON.parse(localStorage.getItem('quotes'));
+        if (savedQuotes) {
+            setFavQuotes(savedQuotes);
+        }
+    }, []);
 
    let favQuotesList = favQuotes.map(f => <div className='favquotes' key={f.content}><p>{f.content}</p><p>{f.author}</p></div>)
 
