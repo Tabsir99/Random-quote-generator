@@ -5,14 +5,21 @@
 }
 
 #root{
-    width: 100vw;
-    height: 100vh;
-
     background-image: url('/public/Background.jpg');
 
-    background-position: center;
+    background-position:center;
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+}
+
+@media (orientation: landscape) and (pointer: coarse){
+
+    #root {
+        height: auto;
+        overflow: hidden;
+    }
 }
 
 @media screen and (min-width: 57rem){

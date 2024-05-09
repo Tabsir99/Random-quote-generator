@@ -6,11 +6,11 @@ export default function Header({handleClick}) {
     return (
         <header>
 
-            <div id='img'></div>
+            <img src="public/designer.png" width={40} alt="Logo"/>
             <nav>
                 <a href='#'>Home</a>
                 <a href='https://portfolio-tabsir.vercel.app'>About</a>
-                <a id='fav' onClick={handleClick}>Favorite Quotes</a>
+                <a id='fav' onClick={handleClick}>Favorites</a>
             </nav>
 
         </header>

@@ -8,10 +8,7 @@
   outline: none;
   border: 4px solid $color;
 }
-#img{
-  width: 40px;
-  background-image: url('/public/designer.png')
-}
+
 Header{
   @include center(space-between);
   width: 100%;
@@ -39,7 +36,7 @@ Header nav a{
 
 
 #main{
-  margin: 5rem auto;
+  margin: 8rem auto;
   text-align: center;
   max-width: 40rem;
   position: relative;
@@ -52,11 +49,11 @@ Header nav a{
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   padding: 0 2rem;
   position: relative;
+  margin-bottom: 1.5rem;
 }
 
 #save{
   position: absolute;
-  
   font-size: 1.3rem;
   bottom: 10rem;
   right: 2rem;
@@ -65,9 +62,8 @@ Header nav a{
 }
 
 
-
 #save:hover,#save:active{
-  transform: scale(1.6);
+  transform: scale(1.4);
 }
 #main #AuthorName{
   margin: 0.4rem;
@@ -137,10 +133,10 @@ Header nav a{
 
 #Social{
   height: auto;
-  @include center();
+  @include center(space-between);
   width: 100%;
   flex-wrap: wrap;
-  gap: 1rem
+  gap: 1rem;
 }
 #Social button {
   background: linear-gradient(135deg, rgb(179, 180, 171) 0%, rgba(157, 163, 112, 1) 100%);
@@ -166,9 +162,8 @@ Header nav a{
 }
 
 #Social #share{
-  @include center(space-between);
+  @include center();
   gap: 0.2rem;
-  flex-basis: 6rem;
 }
 
 #Social #share a {
@@ -176,7 +171,7 @@ Header nav a{
   font-size: 1.5rem;
   transition: 0.3s;
   padding: 0.2rem 0;
-  flex-grow: 1;
+  flex-shrink: 1;
 }
 
 #Social #share a:hover{
@@ -211,13 +206,14 @@ Header nav a{
   right: 0;
   height: 100%;
   background-color: #f9f9f9;
-  width: 25rem;
+  width: 80%;
   padding: 2rem 1rem;
   z-index: 100;
   overflow-y: scroll;
   box-shadow: -10px 0px 20px rgba(0,0,0,0.1);
   transition: transform 0.3s ease-in-out;
-  transform: translateX(25rem);
+  transform: translateX(30rem);
+  max-width: 30rem;
 }
 #modal{
   background-color: black;
@@ -279,8 +275,7 @@ Header nav a{
     color: black
   }
   #save{
-  bottom: 10rem;
-  right: 47%;
   font-size: 1.6rem;
+  top: 6rem;
 }
 }
