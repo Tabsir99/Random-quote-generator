@@ -64,6 +64,7 @@ export default function MainBody({favIsClicked ,handleClick}) {
     const [fade ,setFade] = useState(false);
     const [selected ,setSelected] = useState('Select Author');
     const [selectedArray, setSelectedArray] = useState([]);
+    const [favQuotes, setFavQuotes] = useState([]);
     
 
     function handleButtonClick() {
@@ -101,7 +102,6 @@ export default function MainBody({favIsClicked ,handleClick}) {
         setAuthor(filtered[0].author)
     }
 
-    const [favQuotes, setFavQuotes] = useState([]);
     function handleSaveClick(){
         let item = JSON.parse(localStorage.getItem('quotes'));
         if(item === null) item = []
@@ -117,15 +117,15 @@ export default function MainBody({favIsClicked ,handleClick}) {
         setFavQuotes(JSON.parse(localStorage.getItem('quotes')))
     }
 
-    window.onload = () => {
-        if(JSON.parse(localStorage.getItem('quotes')) !== null){
-        setFavQuotes(JSON.parse(localStorage.getItem('quotes')))
-        }
-        else{
-            setFavQuotes([])
-        }
-    }
 
+
+
+      window.addEventListener('DOMContentLoaded',() => {
+
+        if(JSON.parse(localStorage.getItem('quotes')) !== null){
+            setFavQuotes(JSON.parse(localStorage.getItem('quotes')))
+            }
+      })
 
    let favQuotesList = favQuotes.map(f => <div className='favquotes' key={f.content}><p>{f.content}</p><p>{f.author}</p></div>)
 
